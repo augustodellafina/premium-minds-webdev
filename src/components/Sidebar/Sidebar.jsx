@@ -18,13 +18,14 @@ export function Sidebar() {
   };
 
   return (
-    <aside className="sidebar">
+    <aside className="sidebar" role="navigation" aria-label="Menu principal">
       <nav className="sidebar-nav">
         {menuItems.map((item, idx) => (
           <Link 
             key={idx} 
             to={item.link} 
             className={`nav-link ${isActiveLink(item.link) ? 'active' : ''}`}
+            aria-current={isActiveLink(item.link) ? 'page' : undefined}
           >
             {item.label}
           </Link>

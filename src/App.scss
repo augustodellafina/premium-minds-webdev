@@ -7,6 +7,26 @@
   box-sizing: border-box;
 }
 
+// Skip link for keyboard navigation accessibility
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary-600);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  z-index: 10000;
+  border-radius: 0 0 var(--radius-md) 0;
+  font-weight: var(--font-weight-semibold);
+
+  &:focus {
+    top: 0;
+    outline: 2px solid var(--color-primary-400);
+    outline-offset: 2px;
+  }
+}
+
 html,
 body {
   font-family: var(--font-family-base);

@@ -40,13 +40,13 @@ const Input = forwardRef(({
       {label && (
         <label htmlFor={inputId} className="input-field__label">
           {label}
-          {required && <span className="input-field__required">*</span>}
+          {required && <span className="input-field__required" aria-label="obrigatório">*</span>}
         </label>
       )}
       
       <div className="input-field__wrapper">
         {leftIcon && (
-          <div className="input__icon input__icon--left">
+          <div className="input__icon input__icon--left" aria-hidden="true">
             {leftIcon}
           </div>
         )}
@@ -63,6 +63,7 @@ const Input = forwardRef(({
           required={required}
           className={inputClasses}
           aria-invalid={error ? 'true' : 'false'}
+          aria-required={required ? 'true' : 'false'}
           aria-describedby={
             error || helperText ? `${inputId}-message` : undefined
           }
@@ -70,7 +71,7 @@ const Input = forwardRef(({
         />
         
         {rightIcon && (
-          <div className="input__icon input__icon--right">
+          <div className="input__icon input__icon--right" aria-hidden="true">
             {rightIcon}
           </div>
         )}
@@ -82,6 +83,8 @@ const Input = forwardRef(({
           className={`input-field__message ${
             error ? 'input-field__message--error' : 'input-field__message--helper'
           }`}
+          role={error ? 'alert' : 'status'}
+          aria-live="polite"
         >
           {error || helperText}
         </div>

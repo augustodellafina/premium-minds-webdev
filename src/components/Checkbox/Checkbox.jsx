@@ -13,6 +13,9 @@ export function Checkbox({ label, checked, onChange }) {
         onChange={onChange}
         className="checkbox-input"
         id={id}
+        role="checkbox"
+        aria-checked={checked}
+        aria-label={label}
       />
       <label 
         htmlFor={id} 

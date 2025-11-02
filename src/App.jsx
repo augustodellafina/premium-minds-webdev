@@ -16,7 +16,7 @@ export function App() {
           <Header />
           <div className="app-body">
             <Sidebar />
-            <main className="main-content">
+            <main id="main-content" className="main-content" role="main">
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/user" element={<UserPage />} />

@@ -11,6 +11,7 @@ const Button = forwardRef(({
   rightIcon,
   className = '',
   type = 'button',
+  'aria-label': ariaLabel,
   ...props 
 }, ref) => {
   const buttonClass = [
@@ -28,12 +29,15 @@ const Button = forwardRef(({
       type={type}
       className={buttonClass}
       disabled={disabled || loading}
+      aria-label={ariaLabel || (loading ? 'A processar' : undefined)}
+      aria-busy={loading}
+      aria-disabled={disabled || loading}
       {...props}
     >
-      {loading && <span className="btn__spinner" />}
-      {leftIcon && <span className="btn__icon btn__icon--left">{leftIcon}</span>}
+      {loading && <span className="btn__spinner" aria-hidden="true" />}
+      {leftIcon && <span className="btn__icon btn__icon--left" aria-hidden="true">{leftIcon}</span>}
       <span className="btn__text">{children}</span>
-      {rightIcon && <span className="btn__icon btn__icon--right">{rightIcon}</span>}
+      {rightIcon && <span className="btn__icon btn__icon--right" aria-hidden="true">{rightIcon}</span>}
     </button>
   );
 });

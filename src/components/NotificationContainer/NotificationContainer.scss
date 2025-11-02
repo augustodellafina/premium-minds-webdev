@@ -1,0 +1,120 @@
+@use '../../styles/tokens' as *;
+
+.notification-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 400px;
+  width: 100%;
+  pointer-events: none;
+
+  @include mobile-only {
+    top: 0.5rem;
+    right: 0.5rem;
+    left: 0.5rem;
+    max-width: none;
+  }
+}
+
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  pointer-events: auto;
+  animation: slideIn 0.3s ease-out;
+  border-left: 4px solid;
+
+  &--success {
+    border-left-color: var(--color-success-600);
+    
+    .notification__icon {
+      color: var(--color-success-600);
+    }
+  }
+
+  &--error {
+    border-left-color: var(--color-error-600);
+    
+    .notification__icon {
+      color: var(--color-error-600);
+    }
+  }
+
+  &--warning {
+    border-left-color: var(--color-warning-600);
+    
+    .notification__icon {
+      color: var(--color-warning-600);
+    }
+  }
+
+  &--info {
+    border-left-color: var(--color-primary-600);
+    
+    .notification__icon {
+      color: var(--color-primary-600);
+    }
+  }
+}
+
+.notification__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.125rem;
+}
+
+.notification__message {
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-gray-900);
+}
+
+.notification__close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  background: none;
+  border: none;
+  color: var(--color-gray-600);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+
+  &:hover {
+    background: var(--color-gray-100);
+    color: var(--color-gray-900);
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary-600);
+    outline-offset: 2px;
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(calc(100% + 1rem));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
