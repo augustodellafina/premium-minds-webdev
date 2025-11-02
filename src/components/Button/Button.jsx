@@ -5,6 +5,7 @@ const Button = forwardRef(({
   children, 
   variant = 'primary', 
   size = 'medium', 
+  width = 'wide', 
   loading = false, 
   disabled = false,
   leftIcon,
@@ -18,6 +19,7 @@ const Button = forwardRef(({
     'btn',
     `btn--${variant}`,
     `btn--${size}`,
+    `${width}`,
     loading && 'btn--loading',
     disabled && 'btn--disabled',
     className

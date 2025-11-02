@@ -7,7 +7,7 @@
   justify-content: center;
   gap: var(--space-2);
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-full);
   cursor: pointer;
   transition: all var(--transition-base);
   font-family: inherit;
@@ -114,6 +114,10 @@
     padding: var(--space-3) var(--space-6);
     font-size: var(--font-size-base);
     min-height: 44px;
+
+    &.wide {
+      min-width: 250px;
+    }
 
     @include mobile-only {
       width: 100%;

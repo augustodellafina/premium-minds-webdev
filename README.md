@@ -44,38 +44,38 @@ Sistema completo de CRUD para gestão de utilizadores com interface moderna, res
 
 ### Core Stack
 
-✅ **[React 18.2](https://react.dev/)** - Biblioteca JavaScript para construção de interfaces
-✅ **[Vite 7.1](https://vitejs.dev/)** - Build tool de nova geração
-✅ **[React Router DOM 6.20](https://reactrouter.com/)** - Roteamento e navegação
+- ✅ **[React 18.2](https://react.dev/)** - Biblioteca JavaScript para construção de interfaces
+- ✅ **[Vite 7.1](https://vitejs.dev/)** - Build tool de nova geração
+- ✅ **[React Router DOM 6.20](https://reactrouter.com/)** - Roteamento e navegação
 
 ### Styling
 
-✅ **[Sass 1.69](https://sass-lang.com/)** - Pré-processador CSS com design system
-✅ **[Tailwind CSS 3.3](https://tailwindcss.com/)** - Framework CSS utility-first
-✅ **[PostCSS](https://postcss.org/)** - Processamento e otimização de CSS
+- ✅ **[Sass 1.69](https://sass-lang.com/)** - Pré-processador CSS com design system
+- ✅ **[Tailwind CSS 3.3](https://tailwindcss.com/)** - Framework CSS utility-first
+- ✅ **[PostCSS](https://postcss.org/)** - Processamento e otimização de CSS
 
 ### Metodologias e Padrões
 
-✅ **BEM (Block Element Modifier)** - Nomenclatura CSS consistente
-✅ **Mobile-First Design** - Desenvolvimento responsivo progressivo
-✅ **Component-Driven Development** - Componentização reutilizável
-✅ **Co-location Pattern** - Componentes e estilos na mesma pasta
-✅ **Custom Hooks Pattern** - Lógica reutilizável
-✅ **Compound Components Pattern** - Componentes compostos
-✅ **Barrel Exports** - Imports organizados e limpos
+- ✅ **BEM (Block Element Modifier)** - Nomenclatura CSS consistente
+- ✅ **Mobile-First Design** - Desenvolvimento responsivo progressivo
+- ✅ **Component-Driven Development** - Componentização reutilizável
+- ✅ **Co-location Pattern** - Componentes e estilos na mesma pasta
+- ✅ **Custom Hooks Pattern** - Lógica reutilizável
+- ✅ **Compound Components Pattern** - Componentes compostos
+- ✅ **Barrel Exports** - Imports organizados e limpos
 
 ### Ferramentas de Desenvolvimento
 
-✅ **GitHub Copilot** - Assistente de código com IA
-✅ **ESLint** - Linter JavaScript
-✅ **Autoprefixer** - Prefixos CSS automáticos
+- ✅ **GitHub Copilot** - Assistente de código com IA
+- ✅ **ESLint** - Linter JavaScript
+- ✅ **Autoprefixer** - Prefixos CSS automáticos
 
 ### Arquitetura e State Management
 
-✅ **Context API** - Gerenciamento de estado global
-✅ **useReducer Pattern** - Estado complexo e ações
-✅ **Service Layer Pattern** - Lógica de negócio separada
-✅ **Custom Hooks** - Lógica compartilhada (useForm, useNotification)
+- ✅ **Context API** - Gerenciamento de estado global
+- ✅ **useReducer Pattern** - Estado complexo e ações
+- ✅ **Service Layer Pattern** - Lógica de negócio separada
+- ✅ **Custom Hooks** - Lógica compartilhada (useForm, useNotification)
 
 ## 🏗️ Arquitetura e Padrões
 
@@ -270,43 +270,43 @@ premium-minds-webdev/
 ### 👤 User Page (Criar/Editar)
 
 - **Formulário em seções colapsáveis**:
-  ✅ Informações Básicas
-  ✅ Tipo de Utilizador (múltipla escolha)
-  ✅ Contacto (email, password, telefone)
+  - ✅ Informações Básicas
+  - ✅ Tipo de Utilizador (múltipla escolha)
+  - ✅ Contacto (email, password, telefone)
 - **Validações em tempo real**:
-  ✅ Nome obrigatório
-  ✅ Email com formato válido
-  ✅ Telefone com formato português
-  ✅ Pelo menos um tipo de utilizador
+  - ✅ Nome obrigatório
+  - ✅ Email com formato válido
+  - ✅ Telefone com formato português
+  - ✅ Pelo menos um tipo de utilizador
 - **Feedback visual**:
-  ✅ Mensagens de erro por campo
-  ✅ Notificações de sucesso/erro
-  ✅ Estados de loading
+  - ✅ Mensagens de erro por campo
+  - ✅ Notificações de sucesso/erro
+  - ✅ Estados de loading
 - **Ações**:
-  ✅ Cancelar (reseta formulário)
-  ✅ Guardar (cria ou atualiza)
-  ✅ Navegação automática após sucesso
+  - ✅ Cancelar (reseta formulário)
+  - ✅ Guardar (cria ou atualiza)
+  - ✅ Navegação automática após sucesso
 
 ### 📋 Users List Page
 
 - **Tabela responsiva** de utilizadores
 - **Barra de pesquisa** (busca por nome, email ou tipo)
 - **Ações por utilizador**:
-  ✅ Editar (redireciona para formulário preenchido)
-  ✅ Eliminar (com modal de confirmação)
+  - ✅ Editar (redireciona para formulário preenchido)
+  - ✅ Eliminar (com modal de confirmação)
 - **Empty state** quando não há utilizadores
 - **Scroll horizontal** em mobile
 - **Botão de criar** novo utilizador
 
 ### 🎨 Componentes Reutilizáveis
 
-✅ **Button** - Variantes (primary, secondary), tamanhos, loading state
-✅ **Input** - Label, placeholder, validação, mensagem de erro
-✅ **Modal** - Confirmações e diálogos
-✅ **Checkbox** - Customizado com SVG, acessível
-✅ **CollapsibleSection** - Seções expansíveis com animação
-✅ **Header** - Cabeçalho fixo com logo
-✅ **Sidebar** - Navegação lateral responsiva
+- ✅ **Button** - Variantes (primary, secondary), tamanhos, loading state
+- ✅ **Input** - Label, placeholder, validação, mensagem de erro
+- ✅ **Modal** - Confirmações e diálogos
+- ✅ **Checkbox** - Customizado com SVG, acessível
+- ✅ **CollapsibleSection** - Seções expansíveis com animação
+- ✅ **Header** - Cabeçalho fixo com logo
+- ✅ **Sidebar** - Navegação lateral responsiva
 
 ## 🎨 Design System
 
@@ -379,47 +379,47 @@ Desktop:  ≥ 1024px
 ## 📱 Responsividade
 
 ### Mobile (< 768px)
-✅ Layout em coluna única
-✅ Sidebar convertida em header
-✅ Tabelas com scroll horizontal
-✅ Botões full-width
-✅ Font-size otimizado para mobile
+- ✅ Layout em coluna única
+- ✅ Sidebar convertida em header
+- ✅ Tabelas com scroll horizontal
+- ✅ Botões full-width
+- ✅ Font-size otimizado para mobile
 
 ### Tablet (768px - 1023px)
-✅ Sidebar reduzida (240px)
-✅ Grid com 2 colunas
-✅ Padding ajustado
-✅ Cards reorganizados
+- ✅ Sidebar reduzida (240px)
+- ✅ Grid com 2 colunas
+- ✅ Padding ajustado
+- ✅ Cards reorganizados
 
 ### Desktop (≥ 1024px)
-✅ Sidebar completa (280px)
-✅ Layout fluido
-✅ Grid com 3+ colunas
-✅ Hover states otimizados
+- ✅ Sidebar completa (280px)
+- ✅ Layout fluido
+- ✅ Grid com 3+ colunas
+- ✅ Hover states otimizados
 
 ## 🎯 Validações e Regras de Negócio
 
 ### Validações de Formulário
 
-✅ **Nome**: Obrigatório, mínimo 2 caracteres
-✅ **Email**: Obrigatório, formato válido (regex)
-✅ **Telefone**: Obrigatório, formato português (+351)
-✅ **Tipo de Utilizador**: Pelo menos 1 selecionado
-✅ **Password**: Opcional para criação
+- ✅ **Nome**: Obrigatório, mínimo 2 caracteres
+- ✅ **Email**: Obrigatório, formato válido (regex)
+- ✅ **Telefone**: Obrigatório, formato português (+351)
+- ✅ **Tipo de Utilizador**: Pelo menos 1 selecionado
+- ✅ **Password**: Opcional para criação
 
 ### Persistência de Dados
 
-✅ Dados salvos em **localStorage**
-✅ Sincronização automática
-✅ Recuperação ao recarregar página
-✅ Fallback para dados iniciais (seed data)
+- ✅ Dados salvos em **localStorage**
+- ✅ Sincronização automática
+- ✅ Recuperação ao recarregar página
+- ✅ Fallback para dados iniciais (seed data)
 
 ### Notificações
 
-✅ **Sucesso**: Utilizador criado/atualizado/eliminado
-✅ **Erro**: Validação falhou, erro genérico
-✅ **Duração**: 5 segundos (auto-dismiss)
-✅ **Posicionamento**: Top-right
+- ✅ **Sucesso**: Utilizador criado/atualizado/eliminado
+- ✅ **Erro**: Validação falhou, erro genérico
+- ✅ **Duração**: 5 segundos (auto-dismiss)
+- ✅ **Posicionamento**: Top-right
 
 ## 🔧 Configurações
 
@@ -460,20 +460,20 @@ export default {
 
 ### Otimizações Implementadas
 
-✅ ⚡ **Vite HMR** - Hot Module Replacement instantâneo
-✅ 🎯 **Code Splitting** - Carregamento lazy por rota
-✅ 🗜️ **Minificação** - CSS e JS minificados
-✅ 🖼️ **Assets Optimization** - SVG otimizados
-✅ 📦 **Tree Shaking** - Remoção de código não utilizado
-✅ 💾 **Memoization** - useMemo e useCallback
-✅ 📂 **Barrel Exports** - Imports organizados
+- ⚡ **Vite HMR** - Hot Module Replacement instantâneo
+- 🎯 **Code Splitting** - Carregamento lazy por rota
+- 🗜️ **Minificação** - CSS e JS minificados
+- 🖼️ **Assets Optimization** - SVG otimizados
+- 📦 **Tree Shaking** - Remoção de código não utilizado
+- 💾 **Memoization** - useMemo e useCallback
+- 📂 **Barrel Exports** - Imports organizados
 
 ### Métricas
 
-✅ **Build Size**: ~150KB (gzipped)
-✅ **First Load**: < 1s
-✅ **Time to Interactive**: < 2s
-✅ **Lighthouse Score**: 95+
+- ✅ **Build Size**: ~150KB (gzipped)
+- ✅ **First Load**: < 1s
+- ✅ **Time to Interactive**: < 2s
+- ✅ **Lighthouse Score**: 95+
 
 ## ♿ Acessibilidade (WCAG 2.1 Level AA)
 
@@ -481,14 +481,14 @@ O projeto implementa **acessibilidade completa** seguindo as diretrizes WCAG 2.1
 
 ### Recursos de Acessibilidade
 
-✅ **ARIA Completo** - Labels, roles, states e live regions
-✅ **Navegação por Teclado** - Tab, Enter, Space, Escape
-✅ **Skip Links** - "Saltar para o conteúdo principal"
-✅ **Focus Management** - Focus trap em modais, outline visível
-✅ **Screen Readers** - Compatível com NVDA, JAWS, VoiceOver
-✅ **Contraste WCAG AA** - Mínimo 4.5:1 para texto normal
-✅ **Mensagens Dinâmicas** - aria-live para notificações
-✅ **Validação Acessível** - aria-invalid e role="alert" em erros
+- ✅ **ARIA Completo** - Labels, roles, states e live regions
+- ✅ **Navegação por Teclado** - Tab, Enter, Space, Escape
+- ✅ **Skip Links** - "Saltar para o conteúdo principal"
+- ✅ **Focus Management** - Focus trap em modais, outline visível
+- ✅ **Screen Readers** - Compatível com NVDA, JAWS, VoiceOver
+- ✅ **Contraste WCAG AA** - Mínimo 4.5:1 para texto normal
+- ✅ **Mensagens Dinâmicas** - aria-live para notificações
+- ✅ **Validação Acessível** - aria-invalid e role="alert" em erros
 
 ### Componentes Acessíveis
 
@@ -506,23 +506,23 @@ O projeto implementa **acessibilidade completa** seguindo as diretrizes WCAG 2.1
 
 ### Conformidade
 
-✅ **Perceptível** - Alternativas de texto, contraste adequado
-✅ **Operável** - Navegação por teclado, skip links
-✅ **Compreensível** - Labels claros, mensagens de erro descritivas
-✅ **Robusto** - Compatível com tecnologias assistivas
+- ✅ **Perceptível** - Alternativas de texto, contraste adequado
+- ✅ **Operável** - Navegação por teclado, skip links
+- ✅ **Compreensível** - Labels claros, mensagens de erro descritivas
+- ✅ **Robusto** - Compatível com tecnologias assistivas
 
 ## 🧪 Qualidade de Código
 
 ### Boas Práticas
 
-✅ Componentes reutilizáveis e atômicos
-✅ Props tipadas com PropTypes (implícito)
-✅ Custom hooks para lógica compartilhada
-✅ Nomenclatura consistente (BEM, camelCase)
-✅ Comentários explicativos onde necessário
-✅ Separação de responsabilidades
-✅ DRY (Don't Repeat Yourself)
-✅ SOLID principles aplicados
+- ✅ Componentes reutilizáveis e atômicos
+- ✅ Props tipadas com PropTypes (implícito)
+- ✅ Custom hooks para lógica compartilhada
+- ✅ Nomenclatura consistente (BEM, camelCase)
+- ✅ Comentários explicativos onde necessário
+- ✅ Separação de responsabilidades
+- ✅ DRY (Don't Repeat Yourself)
+- ✅ SOLID principles aplicados
 
 ---
 
