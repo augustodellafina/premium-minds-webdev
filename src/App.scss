@@ -1,0 +1,321 @@
+@use './styles/tokens' as *;
+
+// Reset and Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-900);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+
+  @include mobile-only {
+    font-size: var(--font-size-lg); // Ligeiramente maior para mobile
+  }
+}
+
+// Layout - Mobile First with Header
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 60px; // Header height on mobile
+
+  @include tablet-up {
+    flex-direction: row;
+    margin-top: 70px; // Header height on tablet/desktop
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: var(--container-padding-mobile);
+  background-color: var(--color-gray-50);
+
+  @include tablet-up {
+    margin-left: var(--sidebar-width-tablet);
+    padding: var(--container-padding-tablet);
+  }
+
+  @include desktop-up {
+    margin-left: var(--sidebar-width-desktop);
+    padding: var(--container-padding-desktop);
+  }
+}
+
+// Page Components - Mobile First - Standardized Layout
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  @include mobile-only {
+    padding: 0;
+  }
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+
+  @include tablet-up {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-8);
+  }
+
+  h1 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+
+    @include desktop-up {
+      font-size: var(--font-size-3xl);
+    }
+    
+    @include mobile-only {
+      font-size: var(--font-size-3xl);
+    }
+  }
+}
+
+// Standardized page content card
+.page-content {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-base);
+  padding: var(--space-4);
+  
+  @include tablet-up {
+    padding: var(--space-4);
+  }
+}
+
+// Search Bar
+.search-bar {
+  margin-bottom: var(--space-6);
+  
+  @include mobile-only {
+    margin-bottom: var(--space-4);
+  }
+}
+
+// Table - Mobile First
+.users-table {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-200);
+  background: var(--color-white);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background-color: var(--color-gray-50);
+
+      th {
+        padding: var(--space-3) var(--space-2);
+        text-align: left;
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-gray-600);
+        border-bottom: 1px solid var(--color-gray-200);
+        white-space: nowrap;
+
+        @include tablet-up {
+          padding: var(--space-3) var(--space-4);
+          font-size: var(--font-size-sm);
+        }
+        
+        @include mobile-only {
+          font-size: var(--font-size-base);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid var(--color-gray-100);
+        transition: background-color var(--transition-fast);
+
+        &:hover {
+          background-color: var(--color-gray-50);
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        td {
+          padding: var(--space-3) var(--space-2);
+          font-size: var(--font-size-sm);
+          color: var(--color-gray-900);
+          vertical-align: middle;
+
+          @include tablet-up {
+            padding: var(--space-4) var(--space-4);
+          }
+          
+          @include mobile-only {
+            font-size: var(--font-size-base);
+          }
+
+          // Actions column
+          &:last-child {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Action buttons in tables
+.action-buttons {
+  display: flex;
+  gap: var(--space-2);
+  
+  @include mobile-only {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}
+
+// Empty state for tables
+.empty-state {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--color-gray-500);
+  font-style: italic;
+  
+  @include mobile-only {
+    padding: var(--space-6);
+  }
+}
+
+// User Form
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  
+  .collapsible-section {
+    border-radius: var(--radius-lg);
+    
+    &:last-of-type {
+      .collapsible-content {
+        border-bottom-left-radius: var(--radius-lg);
+        border-bottom-right-radius: var(--radius-lg);
+      }
+    }
+  }
+}
+
+// checkbox-group agora usa classes Tailwind diretamente no JSX
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  
+  @include mobile-only {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+// Home Page Navigation
+.home-nav {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin: var(--space-6) 0;
+
+  @include mobile-only {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  @include tablet-up {
+    gap: var(--space-6);
+    flex-direction: row;
+  }
+
+  .nav-card {
+    padding: var(--space-5);
+    background-color: var(--color-primary-500);
+    border-radius: var(--radius-lg);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-md);
+    max-width: 320px;
+
+    @include tablet-up {
+      padding: var(--space-6);
+    }
+
+    @include mobile-only {
+      width: 100%;
+      max-width: none;
+    }
+
+    &:hover {
+      background: var(--color-primary-600);
+      box-shadow: var(--shadow-lg);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    h3 {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-2);
+      
+      @include mobile-only {
+        font-size: var(--font-size-2xl);
+      }
+    }
+
+    p {
+      font-size: var(--font-size-sm);
+      opacity: 0.9;
+      margin: 0;
+      padding: 0;
+      color: var(--color-white);
+      
+      @include mobile-only {
+        font-size: var(--font-size-lg);
+      }
+    }
+  }
+}
+
+// Legacy classes for compatibility
+.user-page,
+.users-list-page,
+.home-page {
+  @extend .page-container;
+}

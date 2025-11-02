@@ -1,0 +1,75 @@
+@use '../../styles/tokens' as *;
+
+// Collapsible Section - Mobile First
+.collapsible-section {
+  .collapsible-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+    transition: all var(--transition-base);
+    min-height: 44px; // Touch-friendly
+
+    h3 {
+      margin: 0;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-900);
+
+      @include tablet-up {
+        font-size: var(--font-size-base);
+      }
+      
+      @include mobile-only {
+        font-size: var(--font-size-lg);
+      }
+    }
+
+    .icon {
+      font-size: var(--font-size-sm);
+      color: var(--color-gray-500);
+      transition: color var(--transition-base);
+      line-height: 1;
+      font-weight: var(--font-weight-normal);
+    }
+
+    &:hover {
+      color: var(--color-primary-500);
+
+      .icon {
+        color: var(--color-primary-500);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary-500);
+      outline-offset: 2px;
+      border-radius: var(--radius-base);
+    }
+  }
+
+  .collapsible-content {
+    animation: slideDown var(--transition-base) ease;
+    padding: 0 var(--space-4) 0 var(--space-4);
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
