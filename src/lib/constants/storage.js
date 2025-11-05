@@ -1,6 +1,6 @@
 // Storage keys for localStorage
 export const STORAGE_KEYS = {
-  USERS: 'premium-minds-users'
+  USERS: 'crud-users'
 };
 
 // Default values

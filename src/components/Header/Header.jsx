@@ -16,7 +16,7 @@ export function Header() {
             />
             <img 
               src="/logos/LOGO-WDR.png" 
-              alt="WEBDEV - Premium Minds Challenge" 
+              alt="WEBDEV - CRUD Project Logo" 
               className="logo-img"
               width="120"
               height="40"

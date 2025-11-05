@@ -40,8 +40,8 @@ export function HomePage() {
   return (
     <div className="page-container">
       <div className="page-header">
-        <h1>Bem-vindo ao Premium Minds</h1>
-        <p className="subtitle">Sistema de Gestão de Utilizadores - Premium Minds</p>
+        <h1>Bem-vindo ao CRUD Dashboard</h1>
+        <p className="subtitle">Sistema de Gestão de Utilizadores - CRUD</p>
       </div>
 
       <div className="page-content">

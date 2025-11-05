@@ -33,7 +33,7 @@ export function Sidebar() {
       </nav>
 
       <footer className="sidebar-footer">
-        <p>2025® Premium-minds.com</p>
+        <p>2025® CRUD Project</p>
       </footer>
     </aside>
   );

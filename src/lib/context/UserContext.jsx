@@ -10,7 +10,7 @@ const initialState = {
       id: '1',
       name: 'Augusto Chagas',
       userTypes: ['Web Developer', 'UI/UX Designer'],
-      email: 'augusto.chagas@premium-minds.com',
+      email: 'augusto.chagas@crud.com',
       password: '••••••••',
       phone: '+351 916 534 613',
       createdAt: new Date('2025-10-03').toISOString()
@@ -19,7 +19,7 @@ const initialState = {
       id: '2',
       name: 'João Silva',
       userTypes: ['Project Manager'],
-      email: 'joao.silva@premium-minds.com',
+      email: 'joao.silva@crud.com',
       password: '••••••••',
       phone: '+351 934 123 456',
       createdAt: new Date('2025-10-03').toISOString()
@@ -98,7 +98,7 @@ export function UserProvider({ children }) {
 
   // Load users from localStorage on mount
   useEffect(() => {
-    const savedUsers = localStorage.getItem('premium-minds-users');
+    const savedUsers = localStorage.getItem('crud-users');
     if (savedUsers) {
       try {
         const users = JSON.parse(savedUsers);
@@ -112,7 +112,7 @@ export function UserProvider({ children }) {
   // Save users to localStorage when users change
   useEffect(() => {
     if (state.users.length > 0) {
-      localStorage.setItem('premium-minds-users', JSON.stringify(state.users));
+      localStorage.setItem('crud-users', JSON.stringify(state.users));
     }
   }, [state.users]);
 

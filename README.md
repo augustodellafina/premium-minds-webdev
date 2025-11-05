@@ -157,7 +157,7 @@ Clone o repositório e instale as dependências:
 git clone <repository-url>
 
 # Entre no diretório
-cd premium-minds-webdev
+cd crud-webdev
 
 # Instale as dependências
 npm install
@@ -202,7 +202,7 @@ npm run lint
 ## 📁 Estrutura do Projeto
 
 ```
-premium-minds-webdev/
+crud-webdev/
 ├── public/
 │   └── logos/                     # Assets estáticos
 ├── src/

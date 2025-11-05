@@ -236,6 +236,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+
+  // .name-input,
+  // .email-input,
+  // .phone-input,
+  // .password-input {
+  //   width: 50%;
+  // }
   
   .collapsible-section {
     border-radius: var(--radius-lg);

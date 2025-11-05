@@ -1,4 +1,4 @@
-# Estrutura do Projeto - Premium Minds WebDev
+# Estrutura do Projeto - CRUD WebDev
 
 ## 📁 Nova Arquitetura Otimizada
 

@@ -60,6 +60,8 @@
   .collapsible-content {
     animation: slideDown var(--transition-base) ease;
     padding: 0 var(--space-4) 0 var(--space-4);
+    display: flex;
+    gap: 20px;
   }
 
   @keyframes slideDown {
